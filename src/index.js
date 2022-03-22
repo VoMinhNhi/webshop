@@ -6,8 +6,11 @@ const path = require('path');
 
 const port = 3000
 
-// HTTP engine
-app.use(morgan('combined'))
+// Su dung duong di
+app.use(express.static(path.join(__dirname, 'public')))
+
+// HTTP engine (Morgan)
+//app.use(morgan('combined')) 
 
 // Template engine
 app.engine('hbs', engine({
